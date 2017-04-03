@@ -2,6 +2,14 @@
 
 }
 
+.barraBotones {
+	position: absolute;
+	top: 1;
+	width: 100%;
+	background-color: #6fbfb8;
+	opacity: .2;
+}
+
 .filaBotones {
 	display: flex;
 	flex-direction: row;

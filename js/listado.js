@@ -4,7 +4,7 @@ var g_agrupaFecha = true;
 var g_imgs = new Object();
 var g_todas_cargadas = false;
 var g_scrollDiv = false;
-var g_opacity = 1.05;
+var g_opacity = .05;
 var g_administrar = false;
 var g_height_changed = false;
 var g_ratio = 1;
@@ -181,10 +181,33 @@ objImg = function(dataMedia){
 			}
 		} else {
 			if(screen.availWidth > 600){
-				this.elem.setAttribute('src', _data.recorte.t640);
+				this.elem.src = _data.recorte.t640;
 			} else {
 				this.elem.src = _data.recorte.t320;
 			}
+
+			var barra = document.createElement('div');
+			barra.className = 'barraBotones';
+			barra.onmouseover = function(){
+				this.style.opacity = 1;
+			}
+			barra.onmouseout = function(){
+				this.style.opacity = .2;
+			}
+
+			var botones = document.createElement('div');
+			botones.setAttribute('class', 'filaBotones');
+			//img cerrar
+			var cerrar = document.createElement('img');
+			cerrar.setAttribute('src', '/album/public/img/iconos/cerrar.png');
+			cerrar.setAttribute('class', 'botonCerrarVideo');
+			cerrar.onclick = function(){_self.enClick()};
+			botones.appendChild(cerrar);
+			barra.appendChild(botones);
+
+			this.elemDiv.appendChild(barra);
+			this.elemDiv.style.position = 'relative';
+
 		}
 	}
 	this.toThumb = function(){
