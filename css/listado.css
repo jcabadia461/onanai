@@ -1,0 +1,314 @@
+.capaVideo {
+
+}
+
+.filaBotones {
+	display: flex;
+	flex-direction: row;
+    justify-content: flex-end;
+}
+
+video {
+	max-width: 100%;
+}
+
+.listadoImgsFlex {
+	margin-top: 30px;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.imageThu2 {
+	margin: 4px;
+	max-width: 100%;
+}
+
+.imageThu2 img {
+	height: auto;
+	max-width: 100%;
+}
+
+.estirar {width: 100%;}
+.col_1 {
+	width: 100%;
+	text-align: center;
+}
+.thu {
+	display: inline-block;
+	margin-top: 1px;
+	margin-left: 1px;
+}
+
+
+.prueba {content: "18"}
+
+.thuCheck {
+	display: inline-block;
+	margin-top: 1px;
+	margin-left: 1px;
+	background-image: url('/album/public/img/iconos/Check.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70%;
+	box-shadow: inset 0 0 10px #0f0;
+}
+
+.thuCheck img {
+	opacity: .6 !important;
+}
+
+.bigThu {
+	width: 96%;
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	text-align : -webkit-center;
+	max-width : 740px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.bigThuImg {
+	width : auto;
+	height : auto !important;
+	max-width : 100%;
+}
+
+/* mediaquerys para moviles */
+@media screen and (min-width: 180px) and (max-width: 380px) {
+	div.s-menu {display: none;}
+	div.col_2 {display:none;}
+	.cuerpo1 {position: relative;}
+	div.col_2 {position: absolute; float: none; width: 100%}
+	iframe {height: 260px}
+	div.tree {font-size: 2.4em}
+	p {font-size: 1.6em}
+	
+	div.s-menu li {
+		width: auto;
+		float: none;
+		display: block;
+		border-bottom: 1px solid #42434A;
+		padding: 0px 10px 0px 0px;
+		text-align: left;
+		background-image: linear-gradient(to bottom, #282830 0%, #111113 100%);
+	}
+}
+
+@media screen and (min-width: 381px) and (max-width: 680px) {
+	div.s-menu {display: none;}
+	div.col_2 {display:none;}
+	div.col_2 {position: absolute; float: none; width: 100%}
+	iframe {height: 450px}
+	div.tree {font-size: 2.4em}
+	p {font-size: 1.6em}
+	div.s-menu li {
+		width: auto;
+		float: none;
+		display: block;
+		border-bottom: 1px solid #42434A;
+		padding: 0px 10px 0px 0px;
+		text-align: left;
+		background-image: linear-gradient(to bottom, #282830 0%, #111113 100%);
+	}
+
+}
+
+
+
+
+
+@media screen and (min-width: 681px) and (max-width: 4000px) {
+	div.s-menu {display: none;}
+	div.col_2 {display:none;}
+	div.col_2 {position: absolute; float: none; width: 30%; left: 70%;}
+	iframe {height: 450px}
+	div.tree {font-size: 1.5em}
+	p {font-size: 1.5em}
+	div.s-menu li {
+		width: auto;
+		float: none;
+		display: block;
+		border-bottom: 1px solid #42434A;
+		padding: 0px 10px 0px 0px;
+		text-align: left;
+		background-image: linear-gradient(to bottom, #282830 0%, #111113 100%);
+	}
+
+
+
+
+
+}
+
+.div2 {display:none; background-color: honeydew; width: 55%; height: 90%; margin: 10px 10px 10px 10px; overflow: scroll; font-size: 1em;}
+.div3 {margin: 2px 2px 2px 2px; float: left; width: 31%}
+.div4 {float:left; width: 100%; height: 90%; overflow: hidden;}
+a{text-decoration:underline; color:#000}
+a:hover{text-decoration:none}
+a:visited{text-decoration:none}
+a:link{text-decoration:none}
+a:active{text-decoration:none}
+
+.cuerpo1 {width: 96%; margin: auto; position: relative; clear: both;}
+.valor {display: none;}
+.menu {
+	width: 96%;
+	background-color: white;
+	opacity: 0.5;
+	margin: 5px;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}
+
+.menu.admin {
+	background-color: antiquewhite;
+	opacity: 1;
+}
+
+.menu.admin div {
+	margin: 5px;
+}
+.menu img {
+	opacity: 1;
+	float: right;
+	margin-right: 10px;
+}
+.menu p {
+	float: left;
+	font-size: 1.5em;
+	padding: 0px 28px 0px 0px;
+	background: url("/album/public/img/fnd_menu_mov.png") no-repeat scroll right center transparent;
+}
+.s-menu {
+	height: 22px;
+	clear: both; 
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+	background-color: rgba(200,200,200, 0.6);
+	height: 500px;
+}
+.s-menu ul { width: 98%; }
+.s-menu li {
+	float: left;
+	list-style: outside none none;
+	width: 14%;
+	font: 1.4em/100% OpenSans,Arial,Helvetica,Tahoma,sans-serif;
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+}
+.s-menu li a {
+	font: 1.4em/100% OpenSans,Arial,Helvetica,Tahoma,sans-serif;
+	color: #FFF;
+	text-transform: uppercase;
+	line-height: 2.5em;
+	margin-left: 10px;
+}
+
+
+.tools {
+    display: inline-block;
+    margin: 6px 6px 6px 6px;
+    width: 100%;
+}
+
+.tools-ico-txt {
+	width: 100%;
+	height: 20px;
+}
+.tools-ico-txt img {
+	float: left;
+	width: 25px;
+}
+
+.tools-ico-txt span {
+	color: whitesmoke;
+	float: left;
+	font-size: 1.7em;
+	margin-top: 6px;
+	margin-left: 6px;
+}
+
+.admin-opciones {
+	clear: both;
+	margin: 6px 6px 6px 6px;
+	display: none;
+}
+
+.tools-comunes {
+    display: inline-block;
+    width: 100%;
+    background-color: cadetblue;
+}
+.admin-opciones-comunes {
+	clear: both;
+	margin: 6px 6px 6px 6px;
+}
+
+
+.tools-ico-txt-item {
+	clear: both;
+	height: 26px;
+	margin-top: 20px;
+}
+.tools-ico-txt-item img {
+	float: left;
+	width: 32px;
+}
+.tools-ico-txt-item span {
+	color: whitesmoke;
+	float: left;
+	font-size: 2em;
+	margin-top: 6px;
+	margin-left: 6px;
+}
+
+.u_login {
+	float: right;
+	padding-right: 10px;
+}
+p.u_nickname {
+	color: black;
+	font-size: 1.2em;
+	background: none;
+	padding-right: 6px;
+}
+
+a.u_desconectar {
+	color: blue;
+	font-weight: bold;
+	font-size: 1.5em;
+	bottom: 0px;
+	border: 1px solid gray;
+	padding: 1px;
+}
+
+a.u_registrate {
+	padding-right: 10px;
+	font-size: 1.2em;
+}
+
+a.u_iniciar_sesion {
+	border: 1px solid gray;
+	padding: 4px;
+	border-radius: 4px;
+	font-size: 1.2em;
+}
+
+.menu-admin {
+	clear: both;
+	display: none;
+	text-align: center;
+}
+.menu-admin img {
+	width: 32px;
+	float: none;
+	margin-left: 20px;
+}

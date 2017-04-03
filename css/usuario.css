@@ -1,0 +1,94 @@
+*{
+	font-size: .95em;
+	font: inherit;
+	color: #393939;
+	font-family: "Opensans-Regular",serif;
+}
+
+.cuerpo1 {
+	display: block;
+	width: 90%;
+	margin: 7em auto;
+	max-width: 980px;
+}
+
+.login{
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+input{
+	border-radius: 0.5em;
+	margin-top: 0.5em;
+	padding: 0.3em;
+}
+
+form#form_login {
+	font-size: 1.7em;
+	border: 0.06em solid black;
+	padding: 2em;
+	border-radius: 0.5em;
+}
+
+button#ug_boton_principal {
+	padding: 0.6em;
+	margin-top: 1em;
+	border-radius: 0.5em;
+}
+
+
+.u_error {
+	padding: 5px;
+	color: red;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.u_login {
+	float: right;
+	padding-right: 2em;
+	padding-top: 0.6em;
+}
+
+p.u_nickname {
+	color: black;
+	font-size: 1.2em;
+	background: none;
+	padding-right: 6px;
+}
+
+a.u_desconectar {
+	color: blue;
+	font-weight: bold;
+	font-size: 1.5em;
+	bottom: 0px;
+	border: 1px solid gray;
+	padding: 1px;
+}
+
+a.u_registrate {
+	padding-right: 10px;
+	font-size: 1.2em;
+}
+
+a.u_iniciar_sesion {
+	border: 1px solid gray;
+	padding: 0.2em;
+	border-radius: 0.5em;
+	font-size: 1.2em;
+}
+
+.menu p {
+	float: left;
+}
+
+.menu {
+	height: 33px;
+	width: 96%;
+	background-color: white;
+	opacity: 0.5;
+	margin: 5px;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}

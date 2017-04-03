@@ -1,0 +1,254 @@
+var g_pagina = 0;
+var g_pidiendo = false;
+var g_agrupaFecha = true;
+var g_imgs = new Object();
+var g_todas_cargadas = false;
+
+
+function showTree() {
+	if($("div.s-menu").css("display") == "block"){
+		$("div.s-menu").hide();
+	}
+	if($(".col_2").css("display") == "block"){
+		$("div.col_2").css('display','none');
+	} else {
+		$("div.col_2").css('display','block');
+	}
+}
+
+function showMenuResponsive() {
+	if($(".col_2").css("display") == "block"){
+		$("div.col_2").hide();
+	}
+	if($("div.s-menu").css("display") == "block"){
+		$("div.s-menu").hide();
+	} else {
+		$("div.s-menu").show();
+	}
+}
+
+function maximise(){
+	alto = $(".imageThu").css("height");
+	alto.replace("px", "");
+	alto = parseInt(alto);
+	alto = (alto / 10) + 1;
+	$(".imageThu").css("height", alto+"em");
+}
+function minimise(){
+	alto = $(".imageThu").css("height");
+	alto.replace("px", "");
+	alto = parseInt(alto);
+	alto = (alto / 10) - 1;
+	$(".imageThu").css("height", alto+"em");
+}
+
+function listado(){
+	if(!g_todas_cargadas){
+		if(g_pidiendo == false){
+			g_pidiendo = true;
+			url = $("#fechaListado").val();
+			if(url.search('mas-valoradas') > 1)
+				g_agrupaFecha = false;
+			else
+				g_agrupaFecha = true;
+			url = url.concat("/pagina/").concat(g_pagina++);
+			$.getJSON(url, function (response) {
+				if(response.length == 0)
+					g_todas_cargadas = true;
+				$.each(response, function(idx, rec){
+//if(rec.tipo == 'V') {
+					g_imgs[rec.id] = new objImg();
+					if(g_agrupaFecha)
+						g_imgs[rec.id].init(rec, 'fecha');
+					else
+						g_imgs[rec.id].init(rec, 'todas');
+
+					g_imgs[rec.id].showImg();
+//}
+				})
+				g_pidiendo = false;
+				setTimeout(fadeToImgs(), 900);
+			});
+		}
+	}
+}
+
+function fadeToImgs(){
+	for(var index in g_imgs){ 
+		g_imgs[index].fadeTo();
+	}
+}
+
+/*
+* OBJETO img
+*/
+objImg = function() {
+	this.p1Container;
+	this.p1Data;
+	this.p1Borrado = false;
+	this.p1EsVideo = false;
+	this.p1TipoContainer;
+	/* el div que contiene al img */
+	this.p1ElemDiv;
+	/* el img */
+	this.p1ElemImg;
+	
+	this.init = function(data, tipo) {
+		this.p1Data = data;
+		this.p1TipoContainer = tipo;
+		if(this.p1Data.tipo == 'V')
+			this.p1EsVideo = true;
+
+	}
+
+	this.setContainer = function(){
+		if(this.p1TipoContainer == 'fecha'){
+			this.p1Container = $("#"+this.p1Data.fecha);
+			if(this.p1Container.length == 0) {
+				$("#listadoImgs").append('<div id="'+this.p1Data.fecha+'"><p>'+this.p1Data.fecha+'</p></div>');
+				this.p1Container = $("#"+this.p1Data.fecha);
+			}
+		}
+		if(this.p1TipoContainer == 'todas'){
+			this.p1Container = $("#todastodas");
+			if(this.p1Container.length == 0) {
+				$("#listadoImgs").append('<div id="todastodas"></div>');
+				this.p1Container = $("#todastodas");
+			}
+		}
+	}
+
+	this.showImg = function(){
+		this.setContainer();
+		$(this.p1Container).append('<div id="'+this.p1Data.id+'" class="thu"><img id="img_'+this.p1Data.id+'" style="opacity:0" class="imageThu" src="'+this.p1Data.recorte.t320+'"/></div>');
+		this.p1ElemDiv = $("#"+this.p1Data.id);
+		this.p1ElemImg = $("#img_"+this.p1Data.id);
+		this.onClick();
+	}
+
+	this.onClick = function() {
+		$(this.p1ElemImg).click(function(){toBig(this)});
+	}
+
+	this.fadeTo = function(){
+		if($(this.p1ElemImg).css('opacity') < 1){
+			$(this.p1ElemImg).fadeTo('slow', 0.02);
+		}
+
+	}
+
+	this.toBig = function(){
+		$(this.p1ElemDiv).attr('class', 'bigThu');
+		$(this.p1ElemImg).attr('class', 'bigThuImg');
+
+		$(this.p1ElemDiv).append("<a href='#' onclick='toSmallAux("+this.p1Data.id+");return false;'><img class='iconCerrar' src='/album/public/img/iconos/cerrar.png' style='position: absolute; right: 5px; top:5px;'></a>");
+		if(!this.p1EsVideo)
+			$(this.p1ElemDiv).append("<a href='/album/public/index/foto/id/"+this.p1Data.id+"' target='_blank'><img class='iconAmpliar' src='/album/public/img/iconos/ico-full-img.png' style='position: absolute; right: 55px; top:5px;'></a>");
+
+		if(this.p1EsVideo){
+			$(this.p1ElemDiv).append('<iframe src="/album/public/ver/index/video/id/'+this.p1Data.id+'" width="100%" height="510"></iframe>');
+			$(this.p1ElemImg).hide();
+		} else {
+			$(this.p1ElemImg).attr("src",this.p1Data.recorte.t640);
+		}
+
+		$(this.p1ElemImg).unbind();
+		$(this.p1ElemImg).bind('click', function(){toSmall(this);return false;});
+	}
+}
+
+
+$(document).ready(function() {
+	//cargamos la página 0
+	listado();
+});
+
+function toBig(a){
+	var idStr = $(a).attr('id');
+	var idArr = idStr.split('_');
+	var id = idArr[1];
+	g_imgs[id].toBig();
+}
+
+function toSmallAux(id){
+	var img =$("#img_"+id);
+	toSmall(img[0]);
+}
+
+function toSmall(a){
+console.log(a);
+	idStr = $(a).attr("id");
+	idArr = idStr.split("_");
+	id = idArr[1];
+	data = g_imgs[id].p1Data;
+
+	var img = $("#"+idStr);
+	var div = $("#"+id); 
+	div = div[0];
+
+	/* eliminamos los botones añadidos en el toBig */
+	$("#"+id+" a").remove();
+
+	iframe = $("#"+id+" iframe");
+	if(iframe.length == 1){
+		iframe.remove();
+		$(img).show();
+	}
+
+	var thumb = data.recorte.thumb;
+
+	$(div).attr('class', 'thu');
+	$(img).attr('class', 'imageThu');
+
+	$(img).attr("src",thumb);
+
+	$(img).unbind();
+	$(img).click(function(){toBig(a);return false;});
+}
+
+
+/** ************************************************************************************ **/
+ 
+/** ************************************************************************************ **/
+
+/**
+* funcion que nos permite saber si un elemento está en la parte visible de la página.
+* $("#id").isOnScreen() == true -> el elemento está en la parte visible de la pantalla
+**/ 
+$.fn.isOnScreen = function(){
+	
+	var win = $(window);
+	
+	var viewport = {
+		top : win.scrollTop(),
+		left : win.scrollLeft()
+	};
+	viewport.right = viewport.left + win.width();
+	viewport.bottom = viewport.top + win.height();
+	
+	var bounds = this.offset();
+	bounds.right = bounds.left + this.outerWidth();
+	bounds.bottom = bounds.top + this.outerHeight();
+	
+	return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+	
+};
+
+/**
+* cada vez que hacemos scroll, comprobamos si el div es visible
+**/
+$(window).scroll(function(){
+	if(g_pidiendo == false) {
+		if($("#alFinal").isOnScreen()){
+			listado();
+		}
+	}
+});
+$(window).scroll(function(){
+	var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
+	var  scrolltrigger = 0.98;
+
+	if  ((wintop/(docheight-winheight)) > scrolltrigger) {
+		listado();
+	}
+});

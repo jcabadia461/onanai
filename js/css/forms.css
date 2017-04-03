@@ -1,0 +1,144 @@
+
+.imagen_pre {
+	float: left;
+	width: 180px;
+	font-size: 0.8em;
+	margin: 1px;
+}
+
+.imagen_pre img{
+	width: 90px;
+	float: left;
+}
+
+.imagen_pre dt{
+	font-size: 0.8em;
+	margin: auto !important;
+	font-family: sans-serif; 
+}
+
+.multiple dd{
+	display: inline-block;
+	float: left;
+	width: auto;
+}
+
+.imagen_pre li{
+	height: 26px;
+}
+
+.imagen_pre ul {
+	margin-left: 76px;
+}
+
+#elem_subir_todo {
+	display: inline-block;
+    margin-bottom: 15px;
+	width: 100%;
+}
+
+#elem_eliminar_todo {
+	display: inline-block;
+    margin-bottom: 15px;
+	width: 100%;
+}
+
+
+form dt label{
+	font-size: 1.4em;
+}
+
+.in_etiqueta {
+	width: 150px;
+}
+
+.elementos_izq{
+	float: left;
+	width: 40%;
+}
+
+.elementos_der{
+	width: 60%;
+	float: left;
+}
+
+.inputs_generales {
+	width: 100%;
+	float: none;
+	display: inline-block;
+	background-color: snow;
+	padding: 4px;
+}
+.limpiar_float{
+	width: 100%;
+	float: none;
+	display: inline-block;
+}
+
+
+.elementos_izq label {
+    font-size: 1.2em;
+    margin-left: 5px;
+    padding-left: 22px;
+}
+.elementos_der label{
+	/* margin-left: 5px; */
+	font-size: 1.2em; 
+    margin-left: 5px;
+    padding-left: 22px;
+}
+
+
+#derecha_todo-label label {
+    background-attachment: scroll;
+   /* background-clip: content-box; */
+    background-color: transparent;
+    background-image: url("/album/public/img/iconos/ico-rotar-der.png");
+    background-origin: padding-box;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 22px auto;
+}
+
+#izquierda_todo-label label {
+    background-attachment: scroll;
+   /* background-clip: content-box; */
+    background-color: transparent;
+    background-image: url("/album/public/img/iconos/ico-rotar-izq.png");
+    background-origin: padding-box;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 22px auto;
+}
+#eliminar_todo-label label {
+    background-attachment: scroll;
+   /* background-clip: content-box; */
+    background-color: transparent;
+    background-image: url("/album/public/img/iconos/ico-eliminar.png");
+    background-origin: padding-box;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 22px auto;
+}
+
+#fecha_all-label label {
+    background-attachment: scroll;
+   /* background-clip: content-box; */
+    background-color: transparent;
+    background-image: url("/album/public/img/iconos/ico-fecha.png");
+    background-origin: padding-box;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 22px auto;
+}
+
+#etiquetar_todo-label label {
+    background-attachment: scroll;
+   /* background-clip: content-box; */
+    background-color: transparent;
+    background-image: url("/album/public/img/iconos/ico-etiquetar.png");
+    background-origin: padding-box;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 22px auto;
+}

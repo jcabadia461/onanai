@@ -1,0 +1,172 @@
+/* estilos para  la cabecera de Cinco días */
+
+/* banner superior de publicidad */
+.banner_sup{background:#fff url('/img/txt_publi_vert.gif') no-repeat left center; margin:0pt auto; padding:2px 0 2px; width:995px}
+.banner_sup .banner_sup_a{display:inline; float:left; margin:0 2px 0 13px}
+.banner_sup .banner_sup_b{display:inline; float:left; margin:0; padding:0 0 3px; width:220px}
+.banner_sup .banner_top_b,.banner_sup .banner_top_c {display:inline;float:right;margin:0;padding:0;width:220px;}
+.banner_sup .banner_top_b { height:90px;}
+
+/* patrocinio en cabecera */
+#cabecera .patrocinador { position:absolute; top:42px; left:638px;}
+
+/* cabecera */
+#cabecera .int{width:99.5em; margin:0 auto; position:relative;border-bottom:1px solid #ebebeb; position:relative;}
+#cabecera p.cabecera-logo {float:left; /*width: 167px;*/ width:43em; position: relative; z-index: 1; overflow:hidden; font-size:1em; padding:4em 0 1.5em 1em; display:inline}
+#cabecera p.cabecera-logo a{float:left; width: 250px; height: 28px; background: url('/img/logo_int.gif') no-repeat; color: #fff; font:bold 16px Arial, Helvetica, sans-serif; text-indent:-9999px; overflow:hidden}
+#cabecera .int h1 a{width:230px}
+#cabecera h1 a span{/*position: absolute; z-index: -1;*/ } 
+#cabecera h1 a {background: transparent url("/img/logo_int.gif") no-repeat 0 0;color:#FFFFFF;float:left;font:bold 16px/16px Arial,Helvetica,sans-serif;height:28px;overflow-x:hidden;overflow-y:hidden;text-indent:-9999px;width:250px;}
+
+#cabecera p.cabecera-logo a.seccion{/*width:25em;*/ width:auto; font:2.1em Tahoma,Arial, Helvetica, sans-serif; color:#8ABDBD; margin:0.1em 0 0 0; background:none; height:auto; display:inline; white-space:nowrap; background:none;	}
+#cabecera p.cabecera-logo a.seccion:hover{text-decoration:none}
+
+.cont_menu{clear:both; background:#fff /*url('/img/f_submenu.gif') repeat-x left bottom*/ ; padding-bottom:2.9em}
+#menu{position:relative; z-index:5;}
+#menu li{float:left; font-weight: bold; padding:0.1em 0.64em; line-height:3.1em;}
+#menu li:last-child { background:none;}
+#menu li a{color:#fff;font-size:1.2em; text-decoration:none;}
+#menu li a:hover{text-decoration:underline;}
+#menu li.marcado{background:#fff; border-top:1px solid #dbdbdb; border-right:1px solid #e1e1e1; margin-right:.4em; display:inline;}
+#menu li.marcado a{color:#000; text-decoration:none;}
+#menu li.marcado a:hover{color:#000; text-decoration:underline;}
+#menu li ul{position:absolute; top:3.3em; left:0;}
+#menu li li{float:left; line-height:3.1em; background: url('/album/public/img/f_item_submenu.gif') no-repeat right center; padding:0.1em 0.88em;}
+#menu li li:last-child {background: none;}
+#menu li.marcado li a{font:bold 1.2em Arial, Helvetica, sans-serif; color:#205D5D; text-decoration:none; line-height:2.5em;font-weight:normal}
+#menu li.marcado li a:hover{color:#205D5D; text-decoration:underline;}
+#menu li li.marcado{padding:0.1em 0.7em; background: url('/album/public/img/f_item_submenu.gif') no-repeat right center; border:0; margin-right:0}
+#menu li li.marcado a{display:block; color:#666; padding:0 .7em; background:url('/apps/public/img/f_item_submenu_marc.gif') repeat-x left 2px; font-weight:bold;line-height:2.4em;}
+#menu_portada{left:0;}
+#menu_empresas{left:0;}
+#menu_mercados{left:0}
+#menu_economia{left:0}
+#menu_finanzas{left:0}
+#menu_sentidos{left:0}
+#menu_opinion{left:0}
+#menu_participa{left:0}
+#menu_miscinco{left:0}
+/* Fecha ------------------------------- */
+#cabecera p.actualizado{position:absolute; left:0; top:0.5em; width:50em; font:1em Tahoma,Arial, Helvetica, sans-serif; color:#cecece; text-align:left}
+#cabecera p.actualizado strong{color:#E5E5C6; font-weight:bold}
+/* Registro ---------------------------- */
+#cabecera .registro{float:right; padding:0 1px 0 0; font-weight:bold; font:bold 1em Tahoma,Arial, Helvetica, sans-serif; color:#AACDCD}
+#cabecera .registro strong{font-weight:normal; color:#eee}
+#cabecera .registro .nombre{font-weight:normal}
+#cabecera .registro span{display:block; padding:.7em 0 .4em 0}
+#cabecera .registro a{color:#AACDCD; text-decoration:none; background: url(../img/flecha_navega.gif) no-repeat 0 center; padding-left: 0.6em; color: #fff; margin-right: 0.4em}
+#cabecera .registro a:hover{text-decoration:underline}
+#cabecera .registro a span:hover{text-decoration:underline; cursor:pointer;}
+#cabecera .registro a.conectar{background: none; color: #AACDCD; padding-left: 0.5em}
+
+/* Buscador ---------------------------- */
+#cabecera form{position:absolute; right:0; bottom: .4em; width:32em}
+#cabecera form fieldset{}
+#cabecera form legend{display:none}
+#cabecera form label{display:none}
+#cabecera form input{font:1.1em/1.1em Tahoma, Arial, Helvetica, sans-serif; border:1px solid #cdc9c9; margin:0 0 0 0.1em; padding:.1em .2em; width:12.5em}
+#cabecera form .btn_buscar{padding:0.1em 0.7em 0.1em 1.6em; width:auto; border:1px solid #d9d9d9; color:#fff; background:#205D5D url('/img/ico_flecha.gif') no-repeat 6px center; overflow: visible; font-weight: bold; text-transform:uppercase}
+#cabecera form p{display:inline; margin:0 .8em 0 .6em}
+#cabecera form p a{font:1.1em Tahoma, Arial, Helvetica, sans-serif; color:#205D5D; text-decoration:underline; border-left:1px solid #929292; padding-left:.6em}
+#cabecera form p a:hover{text-decoration:none}
+/* Imagen monitor */
+#cabecera .monitor { position: absolute; right: 0; top: 33px; z-index: 10;}
+#portada #cabecera .monitor { top: 40px;}
+/* Edición ----------------------------- */
+#cabecera .edicion{   bottom: 29px;float: right; position: absolute;right: 0;z-index: 10;}
+#cabecera .edicion img { float:left;}
+#cabecera .edicion ul { float:left; display:inline; padding-top: 26px;}
+#cabecera .edicion a{font: 1em/1em Arial, Helvetica, sans-serif ; color:#FFF; text-decoration:underline;line-height:1em}
+#cabecera .edicion li a:hover{text-decoration:underline;}
+#cabecera .edicion li{ padding:0; margin:0; text-align:left; float:left;}
+#cabecera .edicion li.suscripcion{margin-bottom: 14px;}
+#cabecera .edicion li.visorPdf { clear:both;}
+
+/* Nombre usuario ----------------------------- */
+#cabecera strong.saludo{margin: 0 0 0 2em}
+
+
+/* En portada (redefiniciones) 
+--------------------------------------------------------------------- */
+#portada #cabecera .int{border-bottom:1px solid #ebebeb; margin-bottom:-1px}
+#portada #cabecera h1 {width: 365px; padding:50px 0 12px 290px;}
+#portada #cabecera h1 a{float:none; display: block; width: 365px; height: 38px; background: url('/img/logo.gif') no-repeat; text-indent:-9999px;}
+#portada #cabecera h1.logo{padding-top: 0}
+#portada #cabecera h1 a.seccion{display:none}
+#portada #menu{position:relative; z-index:5; background:#000}
+
+#cont_ticker, #cont_ticker_info{width:975px; background:#F8F8F7; border:10px solid #fff; margin:0 auto}
+#cont_ticker .not_ticker span{color:#D76203; font-weight:bold}
+#cont_ticker_info .normal, #cont_ticker .urgente{float:left; display:inline; padding:5px 10px; font:normal 1.1em Tahoma, Arial, Helvetica, sans-serif; color:#fff; background:#A9050C}
+#cont_ticker .not_ticker{float:left; display:inline; padding:5px 10px; font:normal 1.2em Tahoma, Arial, Helvetica, sans-serif; color:#333}
+#cont_ticker .not_ticker a,#cont_ticker_info .not_ticker a{border-bottom:1px dotted #ccc}
+
+#cont_ticker_info{background:#fff; border:10px solid #F8F8F7}
+#cont_ticker_info .not_ticker span{color:#D76203; font-weight:bold}
+#cont_ticker_info .normal{background:#537070}
+#cont_ticker_info .not_ticker{float:left; display:inline; padding:5px 10px; font:normal 1.2em Tahoma, Arial, Helvetica, sans-serif; color:#333}
+
+
+/*#contenedor .publi_h {border-bottom:1px solid #E0DFDB; background:#e0dfdb}*/
+#AdsFramePosTop1 {border-bottom:1px solid #E0DFDB; background:#e0dfdb;margin-bottom:1.9em; margin-top:-1.9em;}
+
+/* Rediseno cabeceras
+----------------------------------------------------------------------- */
+#cabecera.cabecera-v2 #menu {height:34px}
+#cabecera.cabecera-v2  p.actualizado {color:#D0DCDC;font-size:1.1em;float:right;width:auto;padding-top:.3em;margin:0 .5em}
+#cabecera.cabecera-v2 h1 {float:left;padding:2.1em 0 0.7em 0.5em;width:25em;position:relative}
+#cabecera.cabecera-v2 .int h1 {width:22em}
+#cabecera.cabecera-v2  p.actualizado .degrada {color:#82a5a5}
+#cabecera.cabecera-v2 .edicion li.periodico {right:0;top:-25px}
+#cabecera.cabecera-v2 .header-top .registro {font-weight:400; position:absolute; top:0; right:0; }
+#cabecera.cabecera-v2 .header-top .registro a{color:#AECACA;background:none;border-bottom:1px dotted #4b7b7b;padding-left:0;font-family:Tahoma;font-size:11px}
+#cabecera.cabecera-v2 .header-top .registro span {display:inline;line-height:18px;height:18px;padding:0}
+#cabecera.cabecera-v2 .header-top .registro span.icono {background: url(/img/cabecera/iconos-registro.gif) no-repeat;padding:0 0 0 17px}
+
+#cabecera.cabecera-v2  #menu {border-top:1px solid #145E2A}
+#portada #cabecera.cabecera-v2 h1 {float:left; position: relative; z-index: 1; overflow:hidden; display:inline;}
+#portada #cabecera.cabecera-v2  p.actualizado {color:#D0DCDC;font-size:1.1em;position:absolute}
+
+#cabecera.cabecera-v2 .registro {padding:7px 3px 0 0}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login {display:inline;padding:0px 0;font-size:1em}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login strong{font-weight:700}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login  a {font-size:1em;color:#fff;margin-right:0;margin-left:0;}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login  span {border:0;background: url(/img/cabecera/pildora.gif) no-repeat center center;padding:5px 10px 5px;}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login .pildora-dere  span {background-position:center right;margin-left:-2px}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login .pildora-izq  span {background-position:center left}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login .pildora-izq.activada span {background: url(/img/cabecera/pildora-activada.gif) no-repeat center left;color:#215d5d}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login strong.pildora-izq  {font-weight:400}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login strong.pildora-izq  a {font-weight:700;font-size:1.1em}
+#cabecera.cabecera-v2 .header-top .registro span.opc-login strong.activada  a {color:#215d5d}
+#cabecera h1 strong.seccion {background:url(/img/cabecera/separaseccion.gif) no-repeat left 15px; color:#d2e0e0;display:inline;font:2.1em/14px Tahoma,Arial,Helvetica,sans-serif;height:auto;margin:0;white-space:nowrap;width:auto;padding-left:10px;}
+#cabecera.cabecera-v2 .header-top .registro .opc-login .pildora-izq.activada a {border-bottom:0;text-decoration:none;text-decoration:underline}
+#cabecera.cabecera-v2 .header-top .registro .opc-login .pildora-izq a {border-bottom:0;text-decoration:underline}
+#cabecera.cabecera-v2 .header-top .registro .opc-login .pildora-izq a:hover {text-decoration:none}
+
+
+#cabecera.cabecera-v2 .header-top .registro .icono.ico-newsletter {background-position:0 0}
+#cabecera.cabecera-v2 .header-top .registro .icono.ico-rss {background-position:0 -18px}
+#cabecera.cabecera-v2 .header-top .registro .icono.ico-widgets {background-position:0 -36px}
+#cabecera.cabecera-v2 .edicion a {color:#fff;text-decoration:none;line-height:11px}
+
+#cabecera.cabecera-v2 form .btn_buscar{padding:0.1em; width:auto; border:1px solid #d9d9d9; color:#E3EBEB; background:#205D5D; overflow: visible; font-weight: bold; text-transform:none;font-size:9px;font-weight:400}
+#cabecera.cabecera-v2 form input {font:1.1em/11px Tahoma, Arial, Helvetica, sans-serif; border:1px solid #96b0b0; margin:0 0 0 0.1em; padding:.1em .2em; width:100px;height:15px;background: url(/img/cabecera/bg-form-input.gif);float:left}
+#cabecera.cabecera-v2 form input.boton-buscar {width:39px; height:19px;padding:0;border:0}
+#cabecera.cabecera-v2 form {position:absolute;right:0;width:157px}
+
+#cabecera.cabecera-v2 #menu{position:relative; z-index:5; background:#145E2A}
+
+/* publi portadillas */
+#contenido .publi_h #AdsFramePosTop1{ margin:0;}
+
+/* ticker nuevo */
+/* ticker */
+.ticker-sup { clear:both; padding: 6px 0px; padding-left:5px; background:#AEAEAE;}
+.ticker-sup ul { width:995px; margin:0 auto;}
+.ticker-sup ul li { float:left; display:inline; font:bold 1.1em Tahoma,Arial,Helvetica,sans-serif; color:#FFF; padding-right:15px; background: url(/img/sep-ticker.gif) no-repeat right center; margin-left:15px;}
+.ticker-sup ul li.ultimo { background:none; padding-right:0;}
+.ticker-sup ul li a { color:#FFF; }
+.ticker-sup p { padding-left:8px; display:inline;}
+.ticker-sup p.neu { color:#393838; font:bold 11px/11px Tahoma, Geneva, sans-serif;}
+.ticker-sup p.pos { color:#61982A; font:bold 11px/11px Tahoma, Geneva, sans-serif;}
+.ticker-sup p.neg { color:#D42A2A; font:bold 11px/11px Tahoma, Geneva, sans-serif;}

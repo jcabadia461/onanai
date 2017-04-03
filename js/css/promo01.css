@@ -1,0 +1,30 @@
+div.tree {
+    background-color: lightGrey;
+    font-size: 1.4em;
+    margin: 1px;
+    padding: 4px;
+}
+
+div.tree_arbol_anio {
+    font-size: 0.9em;
+    margin-left: 20px;
+}
+
+div.tree_arbol_mes {
+	font-size: 0.9em;
+    margin-left: 20px;
+}
+
+div.tree_arbol_mes p span{
+	font-size: 0.8em;
+	margin-left: 10px;
+}
+
+p.tree_select {
+	margin-left : -10px;
+	background : url("/album/public/img/iconos/05.png") no-repeat scroll left 3px transparent
+}
+
+p.tree_select a {
+	margin-left : 12px;
+}

@@ -1,0 +1,285 @@
+do .formulario{ margin:2.8em 3em;}
+#contenido .formulario h2 img{ margin-bottom:-4px;}
+#contenido .formulario legend{ display:none;}
+#contenido .formulario p{  font-size:1em; } 
+#contenido .formulario label{display:inline; font:1.2em Tahoma, Arial, Helvetica, sans-serif; color:#666;padding-bottom:.8em;}
+#contenido p.intro{ font:1.1em Arial, Helvetica, sans-serif; color:#616464;}
+#contenido .formulario .der{float:right; display:inline;}
+#contenido .formulario .salto{float:none; display:block; clear: left;}
+
+#contenido .formulario .ctexto{border:1px solid #ccc; font:.92em Tahoma,Arial,Helvetica,sans-serif; margin:0; padding:.2em .4em; color:#444444; display: block; margin-top:.4em;}
+
+#contenido .formulario .atencion{color:#A11312; font:1.2em Tahoma,Arial,Helvetica,sans-serif; margin-bottom:2em; background:#F2F1EC; border:1px solid #E7E8E2; padding:1.5em; line-height:16px;}
+#contenido .formulario .gracias{color:#000; font:1.2em Tahoma,Arial,Helvetica,sans-serif; margin-bottom:2em;  background:#F2F1EC; border:1px solid #E7E8E2; padding:1.5em; line-height:16px;}
+
+#contenido .formulario select {border:1px solid #ccc; color:#666; font:.92em Tahoma,Arial,Helvetica,sans-serif;
+display:block; margin-top:.4em;}
+
+#contenido .formulario span{ color:#aa050c; font-weight:bold; font-size:0.81em;}
+#contenido .formulario span.neutro{ color:#666; font-weight:normal; font-size:1em; display : block;}
+
+
+#contenido .formulario p{font-size: 1.1em; margin: 0.5em 0 0 0;}
+
+#contenido .formulario .ayuda{ font:1.1em Arial, Helvetica, sans-serif; color:#7A7A7A; margin:-.4em 0 1em; width:40em; float: left; display: inline; }
+
+#contenido .formulario .form_opciones{margin:0 3em 3.3em 3em;}
+#contenido .formulario .form_opciones input{ vertical-align:middle; margin:0; padding:0;}
+#contenido .formulario .form_opciones label{ font:1.2em Tahoma, Helvetica, sans-serif; color:#5b5b59; float:left; display:inline; width: 32em; padding-left:0;margin-top:10px}
+#contenido .formulario .form_opciones .der{ float:right; width:23.5em}
+
+#contenido .formulario .form_opciones input{ margin:0; padding:0; vertical-align:middle;}
+#contenido .formulario .form_opciones strong{ color:#000;}
+#contenido .formulario .form_opciones strong span{ font-size:1em;}
+#contenido .formulario .form_boton{ margin:0; padding:0;}
+#contenido .formulario .form_boton .boton{ }
+#contenido .formulario .envia_form{text-align: center; margin-bottom: 0; padding-bottom: 2em;}
+#contenido .formulario .envia_form input{color: #FFF; text-transform:uppercase; font-size: 1em; font-weight:bold; font-family: Tahoma, "Arial Narrow", Arial; padding: 0.2em 0 0.2em 0.8em; border: 1px #D9D9D9 solid; background:#336666 url(../img/ico_flecha_btn3.gif) no-repeat 5px 5px; width: 18em; vertical-align:center; margin-top: 2em;}
+#contenido .formulario .novalida {background:#fbfadb none repeat scroll 0%; border:1px solid #aa050b; }
+
+
+
+#contenido h2{ color:#7b7b7b; font:2.2em Tahoma, Arial, Helvetica, sans-serif; margin:0 0 .8em 0; background:url('/img/ico_flechag.gif') no-repeat left .23em; padding-left:1em;}
+
+#contenido .contitulo legend{ margin:0 -.7em 1em; padding:0; display:block;}
+#contenido .contitulo legend span{font:1.8em Tahoma, Arial, Helvetica, sans-serif; color:#444; background:#fff url('/img/f_punt.gif') repeat-x left bottom; padding:0 0 .15em 0; display:block; width:609px; }
+
+
+#contenido .perfil label{float: left; display: inline; color: #000; font-weight: bold; margin-right:1em;}
+#contenido .perfil input{ vertical-align:middle; margin:0  .3em 0 ; padding:00;}
+
+#contenido .relleno .ctexto{ background:#e0dfdb; border:1px solid #d6d5d3; font-weight:bold;}
+#contenido .relleno select{ background:#e0dfdb; font-weight:bold;}
+
+
+/* paso1
+--------------------------------------------------------------------------------------------- */
+
+#paso1 #contenido .formulario{ margin:2.8em 0;}
+#paso1 #contenido p.intro{margin:0 3em 2em;}
+#paso1 #contenido h2{ margin:0 1.36em .8em;}
+#paso1 #contenido .formulario .atencion, #paso1 #contenido .formulario .gracias{ margin:0 2.5em 2em;}
+#paso1 #contenido fieldset{ margin-right:3em; margin-left:3em;}
+#paso1 #contenido .contitulo{ margin-bottom:3.6em;}
+#paso1 #contenido .ctexto{ width:23.3em;}
+#paso1 #contenido select{ width:23.3em;}
+
+#paso1 #contenido .form_opciones a{ text-decoration:underline; color:#000; font-weight:bold;}
+#paso1 #contenido .form_opciones input{ display:inline; float:left; margin:0 .3em 0 0; padding:0; *height:18px;}
+
+
+
+#paso1 #contenido .info_suscripcion{ background:#f1f2ed url('/img/f_deggris_reg1.jpg') repeat-x left top; margin:0 .1em; padding-top:1.5em; position:relative; }
+#paso1 #contenido .info_suscripcion h2{ margin:0 0 .55em 0; padding:0 1.5em; background:none; font-size:2em; color:#616464;}
+#paso1 #contenido .info_suscripcion h2 img{ margin-right:.2em;}
+#paso1 #contenido .info_suscripcion ul{ background:url('/img/f_punt2.gif') repeat-x left bottom; padding:0 3em 1.8em;}
+#paso1 #contenido .info_suscripcion ul li{ display:inline; float:left; margin-right:8.6em; width:14.1em;}
+#paso1 #contenido .info_suscripcion ul .ultimo{ margin-right:0;}
+#paso1 #contenido .info_suscripcion ul li .titulo{background:url('/img/ico_flechag2.gif') no-repeat left 0.23em; font:bold 1.1em Tahoma, Arial, Helvetica, sans-serif; color:#d76203; text-transform:uppercase; padding:.3em 0 .3em 2.1em;}
+#paso1 #contenido .info_suscripcion ul li p{ margin:0; padding:0; font:1.1em Arial, Helvetica, sans-serif; color:#666;}
+#paso1 #contenido .info_suscripcion .cont{border-top:1px solid #fff; background:url('/img/f_punt_dobleb.gif') repeat-y 34.7em top; }
+#paso1 #contenido .info_suscripcion .cont p{ display:block; float:none; font:1.2em Arial, Helvetica, sans-serif; color:#616464; padding:0; margin:0;}
+#paso1 #contenido .info_suscripcion .cont p.titulo{ margin-bottom:1em; padding:0;  font:bold 1.1em Tahoma, Arial, Helvetica, sans-serif; color:#616464;}
+#paso1 #contenido .info_suscripcion .cont p.titulo2{font:bold 1.2em Arial, Helvetica, sans-serif; color:#616464; margin-top:1em;}
+#paso1 #contenido .info_suscripcion .cont ul{ background:none; padding:0;}
+#paso1 #contenido .info_suscripcion .cont ul li{ display:block; float:none; font:1.2em Arial, Helvetica, sans-serif; color:#5b5b5b; background:url('/img/f_bolo4.gif') no-repeat left .5em; padding:0 0 1em .6em; margin:0; width:auto;}
+#paso1 #contenido .info_suscripcion .mod_d, #contenido .info_suscripcion .mod_i{ float:left; display:inline; padding-top:1.6em;margin:0 3em;}
+#paso1 #contenido .info_suscripcion .mod_i{ width:28.7em;}
+#paso1 #contenido .info_suscripcion .mod_d{width:26em; padding-top:1.6em;}
+#paso1 #contenido .info_suscripcion .cont .form_boton{ background:none; padding:0; margin:1em 0 2em;}
+#paso1 #contenido .info_suscripcion .cont .form_boton .boton { float:left;}
+#paso1 #contenido .info_suscripcion .f_img { background:url('/img/i_portatil.png') no-repeat left top; width:187px; height:161px; position:absolute; right:25px; top:-110px;}
+* html #paso1 #contenido .info_suscripcion .f_img  { background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='i_portatil.png');}
+#paso1 #contenido p.horizontal { display:block; text-align:center; /*background:url('/img/f_punt2.gif') repeat-x left top*/ margin:0; width:100%; float:none; padding-top:.5em; font:1.1em Arial, Helvetica, sans-serif; color:#515551;}
+#paso1 #contenido p.horizontal a {color:#515151;text-decoration:underline}
+/* usuario
+--------------------------------------------------------------------------------------------- */
+
+#empresa.usuario #contenido .mod_info{padding:1.9em 1.83em 1.9em; margin-bottom:1em; background: url('/img/f_registro_usuario.jpg') repeat-x 0 0;
+}
+#empresa.usuario #contenido .mod_info label{ font:bold 1.1em Tahoma, Arial, Helvetica, sans-serif; color:#205d5d; margin-right:1em;}
+#empresa.usuario #contenido .mod_info p{ color:#666666; font-size:1.2em;}
+#empresa.usuario #contenido .mod_info input{ vertical-align:middle; margin:0 .3em 0 0; padding:0;}
+#empresa.usuario #contenido .mod_info .der{ float:left; display:inline; margin-top:1em; font:bold 1.2em Tahoma, Arial, Helvetica, sans-serif; color:#000; padding-bottom:0;}
+
+
+#empresa #contenido .datos_empresa .direccion{ padding-bottom:1em; margin-bottom:1em;}
+#empresa #contenido .seleccion span{ font-size:0.91em; color:#666; font-weight:normal;}
+#empresa #contenido .datos-pago .n-cuenta p{ font:bold 1.2em Arial, Helvetica, sans-serif; color:#205d5d; margin-bottom:.4em;}
+#empresa #contenido .datos-pago .n-cuenta .ctexto{ display:inline; float:left; width:6.09em; margin-right:.5em;}
+#empresa #contenido .datos-pago .n-cuenta .sintexto{ margin-top:1.2em;}
+#empresa #contenido .datos-pago .n-cuenta .ddp input{width:15em;}
+#empresa #contenido .datos-pago .n-cuenta .dcp input{ width:3.27em;}
+#empresa.usuario #contenido .datos-pago{ margin-bottom:1em; padding-bottom:0;}
+#empresa.usuario #contenido .form_boton{ width:100%;}
+/*#empresa.usuario #contenido .form_boton .boton {left:auto; right:0pt;}*/
+#empresa.usuario #contenido p.txt-usuarios{ font-weight:normal;}
+
+/* empresa
+--------------------------------------------------------------------------------------------- */
+#empresa #contenido fieldset{ padding-bottom:1.5em; }
+#empresa #contenido .contitulo legend span{ position:relative;}
+#empresa #contenido .contitulo legend span strong{position:absolute; right:0; top:.6em; text-align:right; font:bold .61em Tahoma, Arial, Helvetica, sans-serif; color:#000;}
+#empresa #contenido .contitulo legend span strong a{text-transform: uppercase; text-decoration:underline;}
+
+#empresa #contenido input.ctexto{width: 23.36em;}
+#empresa #contenido select{width: 19.9em; margin-bottom:.2em;}
+#empresa #contenido input.ctexto.sombreado{width: 19em; padding: 0;}
+#empresa #contenido fieldset.form_boton{padding:0 0 3.8em; position:relative;}
+#empresa #contenido fieldset.form_boton input.a_der{ position:absolute; right:0; left:auto;}
+#empresa #contenido fieldset.form_boton input{ position:absolute; left:0; right:auto;}
+#empresa #contenido fieldset.apartado{background:url('/img/f_fieldsets.gif') repeat-x left bottom; margin-bottom:2em;}
+#empresa #contenido fieldset.datos_empresa {margin-bottom:1em;}
+#empresa #contenido p.txt-usuarios{background: url('/img/ico_flecha_rojder.gif') no-repeat 0 3px; padding-left: 0.9em; font-weight: bold; float: none; margin-bottom:1em;}
+#empresa #contenido p.txt-usuarios span{color: #336666; text-transform:uppercase; font-weight: bold; font-size: 1em; font-family: Tahoma, "Arial Narrow", Arial; }
+
+
+#empresa #contenido .datos_empresa fieldset{ width:46em; background:url('/img/1x1grisc.gif') repeat-x left bottom;margin-bottom:1.5em; display:block;}
+#empresa #contenido .datos_empresa .apartado{background:url('/img/f_fieldsets.gif') repeat-x left bottom;}
+#empresa #contenido .contitulo .sintitulo legend{display:none; margin:0; padding:0;}
+#empresa #contenido .datos_empresa input.ctexto{width: 18.9em;}
+#empresa #contenido .centro{ margin-left:1.7em; display:inline; float:left;}
+#empresa #contenido .datos_empresa .condiciones{ background:none; margin-bottom:0; padding-bottom:.2em;}
+#empresa #contenido .datos_empresa .condiciones p{ font:1.1em Arial, Helvetica, sans-serif; color:#666; margin-bottom:1em;}
+#empresa #contenido .datos_empresa .condiciones label{ font:1.2em Arial, Helvetica, sans-serif; color:#000;}
+#empresa #contenido .datos_empresa .condiciones label input{ vertical-align:middle;}
+#empresa #contenido .datos_empresa .condiciones label a{ font-weight:bold; text-decoration:underline; color:#000;}
+
+#empresa #contenido #societarios{width:40.5em;}
+#empresa #contenido #usuario-numero{width:5.9em;}
+#empresa #contenido #usuario-escalera{ width:11.45em;}
+
+#empresa #contenido .datos-pago fieldset{ padding-bottom:0;}
+#empresa #contenido .datos-pago .der{ float:left; margin-left:1em;}
+#empresa #contenido .datos-pago .ctexto{ width:19.6em;}
+#empresa #contenido .datos-pago select{ width:11.45em;}
+#empresa #contenido .datos-pago .caducidad{ padding-bottom:1em;}
+#empresa #contenido .datos-pago .caducidad p{ font:1.2em Tahoma, Arial, Helvetica, sans-serif; color:#666;}
+#empresa #contenido .datos-pago .caducidad span{ display:inline; float:left; padding:0 .5em; font-size:1.4em; color:#666; margin-top:.5em; font-weight:bold;}
+#empresa #contenido .datos-pago .caducidad .ctexto{ width:7em; display:inline; float:left;}
+#empresa #contenido .datos-pago .factura{ padding-bottom:0; margin-bottom:1em;}
+#empresa #contenido .datos-pago .factura label{ font:1.1em Tahoma, Arial, Helvetica, sans-serif; color:#000; }
+#empresa #contenido .datos-pago .factura input{ vertical-align:middle;}
+#empresa #contenido .apartado { margin-bottom:.7em;}
+
+#empresa #contenido .seleccion { margin-top:1em;}
+#empresa #contenido .seleccion input { vertical-align:middle; margin:0;}
+/* empresa2
+--------------------------------------------------------------------------------------------- */
+
+#empresa.p2 #contenido input, #empresa.p2 #contenido select {background-color:#E0DFDB;}
+#empresa.p2 #contenido .apartado .usuario p {display:block;margin-bottom:0.5em; color:#205D5D;display:block;font-family:Tahoma,"Arial Narrow",Arial;font-size:1.1em;font-weight:bold;text-transform:uppercase;}
+#empresa.p2 #contenido .perfil input, #empresa.p2 #contenido .form_boton .boton {background-color:#FFFFFF;}
+#empresa.p2 #contenido .claves { padding-bottom:5em;}
+
+
+/* empresa3
+--------------------------------------------------------------------------------------------- */
+#empresa.p3 #contenido h3{background:url('/img/f_punt.gif') repeat-x left bottom; color:#333333; display:block; font:1.8em Tahoma,Arial,Helvetica,sans-serif;  margin:0 0 1em; padding:0 0 0.2em;}
+#empresa.p3 #contenido .mod_info{padding:1.9em 1.83em 1.1em; background: url('/img/f_registro_subscripcion.jpg') repeat-x 0 0; margin-bottom:2.5em;}
+#empresa.p3 #contenido .mod_info h4{ font:bold 1.1em Tahoma, Arial, Helvetica, sans-serif; color:#000; text-transform:uppercase;}
+#empresa.p3 #contenido .mod_info h4 span{ font-size:1em;}
+#empresa.p3 #contenido .mod_info ul{ margin-top:1.5em;}
+#empresa.p3 #contenido .mod_info ul li{ font:1.1em Tahoma, Arial, Helvetica, sans-serif; color:#000; margin-bottom:.8em;}
+#empresa.p3 #contenido .mod_info ul li strong{ margin-top:1.5em; text-transform:uppercase; color:#015561;}
+#empresa.p3 #contenido .datos-pago{padding-bottom:0;}
+
+
+
+
+#empresa.p3 #contenido .form_boton { width:100%;}
+
+
+
+/* bienvenida
+--------------------------------------------------------------------------------------------- */
+#bienvenida #contenido h2{ font:3.5em Tahoma, Arial, Helvetica, sans-serif; color:#205d5d; margin:1em 0 .1em 1em; background:none; padding:0;}
+#bienvenida #contenido h3{color:#7b7b7b; font:2em Tahoma, Arial, Helvetica, sans-serif; margin:0 0 .7em 1.9em; background:url('/img/ico_flechag.gif') no-repeat left .23em; padding-left:1em;}
+#bienvenida #contenido p{ font:1.2em Arial, Helvetica, sans-serif; color:#4f4f4f; margin:0 3.4em 1.5em;}
+#bienvenida #contenido p a{ text-decoration:underline;}
+#bienvenida #contenido .quehacer{background:#eeedeb url('/img/f_boton_registro.jpg') repeat-x left top; border-bottom:2px solid #cfcfcf; margin:0 .2em 2em; padding-bottom:.5em;}
+#bienvenida #contenido .quehacer h4{ font:2em Arial, Helvetica, sans-serif; color:#90908f; padding:.8em .45em 0.2em .45em; text-align:right; margin-bottom:.2em;}
+#bienvenida #contenido .quehacer ul{ background:#fff; margin:0 .5em;}
+#contenido .quehacer ul li{ display:inline; float:left; text-align:center; padding:1.2em 0; width:13em;}
+.pdf #contenido .quehacer ul li{ width:9.5em; }
+.pdf #contenido .quehacer ul .big{ width:17em;}
+#bienvenida #contenido .quehacer a{ font:bold 1.1em Tahoma, Arial, Helvetica, sans-serif; color:#aa050c; background:url('/img/ico_flecha_redonda.gif') no-repeat left .2em; padding-left:1.5em;}
+
+
+/* lateral derecho
+--------------------------------------------------------------------------------------------- */
+#lateral{ padding:0;}
+#lateral .ayuda{ padding:1.5em 0 0; margin:0 0 0 .1em;}
+#lateral .ayuda h2{ font:2em Tahoma, Arial, Helvetica, sans-serif; color:#205d5d; background:url('/img/ico_flechag.gif') no-repeat .6em 0.23em; padding:0 .6em 0 1.65em;}
+#lateral .ayuda ol{ padding:1.5em 1.2em 1.1em; margin:0;}
+#lateral .ayuda ol li{ font:bold 1.2em Arial, Helvetica, sans-serif; color:#aa050c; list-style-type:decimal; margin: 0 0 1em 1.8em; padding:0;}
+#lateral .ayuda ol li p{ font:normal .91em Arial, Helvetica, sans-serif; color:#666;}
+#lateral .ayuda .piemod{ font:1em Arial, Helvetica, sans-serif; color:#666; padding:1.3em 2em 2em; background:#edecea url('/img/f_punt_bg.gif') repeat-x left 5.8em; border-bottom:1px solid #fff;}
+#lateral .ayuda .piemod a{ text-decoration:underline; color:#666;}
+
+
+/* login
+--------------------------------------------------------------------------------------------- */
+#contenido .formulario .recordatorio a{ font:bold 11px Tahoma, Arial, Helvetica, sans-serif; color:#205D5D;}
+#contenido .formulario .recordatorio{ padding:.6em 0 .6em 1.5em; clear:left; margin:0;}
+#contenido .desp_rec{border:1px solid #ededed; border-top:0; padding:1em 2.5em; background:#F6F6F4;}
+#contenido .desp_rec legend span{color:#000000; font:bold 16px Arial,Helvetica,sans-serif; padding:0; margin:0; width:auto; background:none;}
+#contenido .desp_rec legend { margin-bottom:0;}
+#contenedor #contenido .desp_rec fieldset{padding-bottom:0;}
+#contenido .desp_rec label{ display:inline; float:left; padding-bottom:0; font-size:12px;}
+#contenido .desp_rec label span{ font:normal 11px Tahoma, Arial, Helvetica, sans-serif; color:#333;}
+#contenido .desp_rec .boton{ margin:1.8em 0 0 .6em;}
+#contenido .desp_rec .texto{ font:1.1em tahoma, Arial, Helvetica, sans-serif; color:#000; margin-bottom:1em;}
+#contenido .texto_errorlogin{ background:#f8f8f7; }
+#contenido .texto_errorlogin .txt_info{ font:normal 11px Tahoma, Arial, Helvetica, sans-serif; color:#333; padding:1.5em 1.5em 0; margin-bottom:1em;  }
+#contenido .formulario .sin_registro{ background:#e5e4de; padding:1.6em 4.2em; font:11px Tahoma, Arial, Helvetica, sans-serif; color:#000; width:230px; float:right; margin-top:18px;}
+#contenido .formulario .sin_registro a{ font-weight:bold; text-decoration:}
+
+
+/* Modificar empresas
+--------------------------------------------------------------------------------------------- */
+#contenido .gestion{ padding-bottom:1em;}
+#contenido .gestion a{ font:bold 11px Tahoma, Arial, Helvetica, sans-serif; color:#205D5D;}
+
+
+/* Error cuenta o tarjeta
+--------------------------------------------------------------------------------------------- */
+#contenido .formulario .error{font:normal 11px/15px Arial, Helvetica, sans-serif; background:#f2f1ec; color:#000; border:1px solid #e7e8e2; padding:2em; margin-bottom:.5em;  }
+.usuario #contenido .formulario .error{margin-bottom:1.5em; }
+
+
+/* registro desplegables */
+#contenido .registro-desplegables .elemento {margin:0 2.5em .5em;padding:.5em;color:#000; font:1.2em Tahoma,Arial,Helvetica,sans-serif;background:#F2F1EC; border:1px solid #E7E8E2; line-height:16px}
+#contenido .registro-desplegables .elemento .desplegado{display:none}
+#contenido .registro-desplegables .elemento .desplegado ul li {margin:5px 5px 5px 28px;background: url(/img/bolo-lista-ocultable.gif) no-repeat 0 1ex;padding-left:10px}
+#contenido .registro-desplegables .elemento .desplegado p{margin-left:10px}
+	#contenido .registro-desplegables .elemento.on .desplegado {display:block}
+#contenido .registro-desplegables .elemento .iradio {float:left;font-size:11px;margin-right:10px}
+#contenido .registro-desplegables .elemento a.enlace-boton {float:right;background: url(/img/bolo-flecha-abajo.gif) no-repeat left center;padding-left:8px;font-weight:700}
+	#contenido .registro-desplegables .elemento.on a.enlace-boton {background: url(/img/bolo-flecha-top.gif) no-repeat left center;}
+#contenido .registro-desplegables .elemento.on {color:#656565}
+#contenido .registro-desplegables .elemento .cambiante .izq{float:left;width:auto}
+#contenido .registro-desplegables .elemento .cambiante .dere{float:right;width:auto}
+
+#paso1 #lateral .servicios {margin-top:1em}
+
+/*---- MOD SUSCRIPCION VISOR PDF ----*/
+#mod-suscripcion-visor-pdf {background:#FFFFFF none repeat scroll 0 0;display:inline;float:left;width:99.4em;}
+#mod-centrado{width:63.5em; margin:0 auto; padding-bottom:5em;}
+#mod-suscripcion-visor-pdf h3{color:#7b7b7b; font:2.2em Tahoma, Arial, Helvetica, sans-serif; margin:1.8em 0 .7em 0; background:url('/img/ico_flechag.gif') no-repeat left .23em; padding-left:1em;}
+#mod-suscripcion-visor-pdf p{ font:1.2em Arial, Helvetica, sans-serif; color:#4f4f4f; margin:0 0em 1.5em; clear:both;}
+#mod-suscripcion-visor-pdf p a.subrayado{text-decoration:underline; color:#4f4f4f;}
+.fnd-form-suscripcion-visor-pdf{ background-color:#f3f3f1; border:1px solid #d8d8d8; border-left:none; border-right:none; padding:1.6em 0em; margin-bottom:1.5em; width:63.5em; float:left; text-align:center;}
+.fnd-form-suscripcion-visor-pdf label{ font:1.4em Tahoma, Arial, Helvetica, sans-serif; margin:0.5em 6em 0 5em; *margin:0.5em 6em 0 8em;float:left; display:inline;}
+.textoNum{border:1px solid #a6acaa; width:277px; height:15px; padding:5px; margin:0; float:left;}
+.btn-enviar{ width:auto; text-align:right; padding-right:80px; *padding-right:93px; margin-bottom:20px; float:right;}
+
+
+
+#miLogin{float:left;}
+.formulario_login{width:70%;}
+
+
+
+
+

@@ -1,0 +1,83 @@
+/* utilidades */
+.utilidades{background:url(/album/public/img/iconos/fnd_punteado.gif) repeat-x left bottom; padding:0 8px;}
+.margen_utilidades{margin:0 8px 10px 8px; padding:0px;}
+.utilidades .cont{padding:3px 0 2px 0;background:url(/album/public/img/iconos/fnd_punteado.gif) repeat-x left bottom; }
+.utilidades ul{float:right; display:inline; padding:4px 0 0 0; margin:0; background:url(../img/sep_twitter.gif) no-repeat left center;}
+.utilidades li{float:left; display:inline; margin:0px 0 0 10px; padding:5px 0 4px;}
+.utilidades li img {margin:-2px 0 3px}
+.utilidades li.sin_margen{margin-left:0px;}
+.utilidades .cont p.fecha{float:left; display:inline; font:1.1em Tahoma, Arial, Verdana; padding:2px 0 0 0; margin:0 7px 0 0;}
+.utilidades .cont p.comentarios{float:left; display:inline; font:1.1em "Lucida Grande","Lucida Sans Unicode",Tahoma,Arial,Verdana,sans-serif; padding:2px 0 0 0; margin:0 15px 0 0; color:#666;}
+.utilidades .cont p.comentarios a{padding:0 0 0 15px; }
+.utilidades .cont p.comentarios a strong{color:#666; font-weight:normal;}
+
+.utilidades .cont p.comentarios span{margin:0 0 0 7px;}
+.utilidades .cont p.comentarios span a{padding:0 0 0 20px;}
+
+
+.utilidades dl{font:1.2em Tahoma, Arial, Verdana; clear:both; padding:4px 0;}
+.utilidades dt{color:#000; display:inline;}
+.utilidades dd{display:inline;color:#666;}
+.utilidades dd a{color:#666; text-decoration:underline;}
+
+/* votos */
+.votos {position:relative;}
+#votosC{float:right; display:inline;}
+.votosC{float:right; display:inline;}
+.votos a {color:#4C7094; text-decoration:none; font-family:Tahoma,Arial,Helvetica,sans-serif;}
+.votos a:hover {text-decoration:underline;}
+.votos img {vertical-align: middle; margin-top:-1px;}
+.votos .comentarios_s {float:right; height:19px; font:1.1em Tahoma,Arial,Helvetica,sans-serif;}
+.votos_estrellas {float:left; display:inline; font:1.1em/1em Tahoma, Arial, Verdana;  color:#666;margin:-1px 4px 0 3px;}
+.votos_votar {
+    background-color: whitesmoke;
+    border-radius: 6px 6px 6px 6px;
+    color: black;
+    display: inline;
+    float: left;
+    margin-right: 5px;
+    opacity: 0.7;
+    padding-left: 4px;
+	}
+.votos_txt_vota {float:left; display:inline; line-height:1.5em;}
+.votos_resultados {float:left; display:inline;}
+.votos_resultados img{vertical-align:middle;}
+.votos_resultados a{}
+
+.votos_estrella {position:relative; background: url(/album/public/img/iconos/ico_vot_vo.gif); width:76px; height:20px; float:left; display:inline; margin:0px 4px 0px 3px;}
+.votado {background: url(/album/public/img/iconos/ico_vot_no.gif) #fff repeat-x;}
+.votos_estrella a {position:absolute; display:block; height:25px;}
+/*
+.votos_estrella a:hover {background: url(/img/iconos/ico_vot_ov.gif) repeat-x;}
+*/
+.votos_estrella .voto1 {width:15px; z-index:14;}
+.votos_estrella .voto2 {width:30px; z-index:13;}
+.votos_estrella .voto3 {width:45px; z-index:12;}
+.votos_estrella .voto4 {width:60px; z-index:11;}
+.votos_estrella .voto5 {width:76px; z-index:10;}
+
+
+
+/* votaciones */
+.votos_estrella a:hover {background: url(/album/public/img/iconos/ico_vot_ov.gif) repeat-x;}
+
+p.puntuacion{height:10px; font-size:1px; line-height:1px; text-indent:-9000px; clear:both;}
+.cero{background:url(/album/public/img/iconos/estrellas0.gif) no-repeat left top;}
+.medio{background:url(/album/public/img/iconos/estrellas05.gif) no-repeat left top;}
+.uno{background:url(/album/public/img/iconos/estrellas1.gif) no-repeat left top;}
+.unoymedio{background:url(/album/public/img/iconos/estrellas15.gif) no-repeat left top;}
+.dos{background:url(/album/public/img/iconos/estrellas2.gif) no-repeat left top;}
+.dosymedio{background:url(/album/public/img/iconos/estrellas25.gif) no-repeat left top;}
+.tres{background:url(/album/public/img/iconos/estrellas3.gif) no-repeat left top;}
+.tresymedio{background:url(/album/public/img/iconos/estrellas35.gif) no-repeat left top;}
+.cuatro{background:url(/album/public/img/iconos/estrellas4.gif) no-repeat left top;}
+.cuatroymedio{background:url(/album/public/img/iconos/estrellas45.gif) no-repeat left top;}
+.cinco{background:url(/album/public/img/iconos/estrellas5.gif) no-repeat left top;}
+
+/* Estrellas */
+.votos_resultados span { float:left; margin:0 3px 0 1px; line-height:1.5; }
+span.estrella { width:15px; height:19px; background:no-repeat left top; margin:0; float:left; }
+span.no { background-image:url(/album/public/img/iconos/ico_vot_no.gif); }
+span.md { background-image:url(/album/public/img/iconos/ico_vot_md.gif); }
+span.ok { background-image:url(/album/public/img/iconos/ico_vot_ov.gif); }
+
