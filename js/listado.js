@@ -95,7 +95,7 @@ function listado(){
 }
 
 objImg = function(dataMedia){
-	this.elemDiv, this.elem, this.elemCapaVideo, this.elemVideo;
+	this.elemDiv, this.elem, this.elemCapaVideo, this.elemVideo, this.elemBarra;
 	var _data = dataMedia;
 	var _enThumb = true;
 	var _enVideo = false;
@@ -186,27 +186,44 @@ objImg = function(dataMedia){
 				this.elem.src = _data.recorte.t320;
 			}
 
-			var barra = document.createElement('div');
-			barra.className = 'barraBotones';
-			barra.onmouseover = function(){
-				this.style.opacity = 1;
-			}
-			barra.onmouseout = function(){
-				this.style.opacity = .2;
-			}
 
-			var botones = document.createElement('div');
-			botones.setAttribute('class', 'filaBotones');
-			//img cerrar
-			var cerrar = document.createElement('img');
-			cerrar.setAttribute('src', '/album/public/img/iconos/cerrar.png');
-			cerrar.setAttribute('class', 'botonCerrarVideo');
-			cerrar.onclick = function(){_self.enClick()};
-			botones.appendChild(cerrar);
-			barra.appendChild(botones);
+			if(typeof this.elemBarra == 'object') {
+				this.elemBarra.style.display = 'block';
+			} else {
+				this.elemBarra = document.createElement('div');
+				this.elemBarra.className = 'barraBotones';
+				this.elemBarra.onmouseover = function(){
+					this.style.opacity = 1;
+				}
+				this.elemBarra.onmouseout = function(){
+					this.style.opacity = .1;
+				}
 
-			this.elemDiv.appendChild(barra);
-			this.elemDiv.style.position = 'relative';
+				var botones = document.createElement('div');
+				botones.setAttribute('class', 'filaBotones');
+
+				//img zoom
+				var zoom = document.createElement('img');
+				zoom.setAttribute('src', '/album/public/img/iconos/ico-full-img.png');
+				zoom.setAttribute('class', 'botonCerrarVideo');
+				zoom.onclick = function(){_self.enClick()};
+				botones.appendChild(zoom);
+				
+
+				//img cerrar
+				var cerrar = document.createElement('img');
+				cerrar.setAttribute('src', '/album/public/img/iconos/cerrar.png');
+				cerrar.setAttribute('class', 'botonCerrarVideo');
+				cerrar.onclick = function(){_self.enClick()};
+				botones.appendChild(cerrar);
+
+				// fin botones
+
+				this.elemBarra.appendChild(botones);
+
+				this.elemDiv.appendChild(this.elemBarra);
+				this.elemDiv.style.position = 'relative';
+			}
 
 		}
 	}
@@ -218,6 +235,8 @@ objImg = function(dataMedia){
 			this.elemCapaVideo.style.display = 'none';
 			this.elem.style.display = '';
 		} else {
+			if(typeof this.elemBarra == 'object')
+				this.elemBarra.style.display = 'none';
 			this.elem.setAttribute('src', this.getThumb());
 		}
 		this.finalPaintImg();
