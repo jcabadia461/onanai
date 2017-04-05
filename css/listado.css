@@ -7,13 +7,18 @@
 	top: 1;
 	width: 100%;
 	background-color: #6fbfb8;
-	opacity: .2;
+	opacity: .1;
+	margin-top: -1px;
 }
 
 .filaBotones {
 	display: flex;
 	flex-direction: row;
     justify-content: flex-end;
+}
+
+.imgBotones {
+	margin-left: 10px;
 }
 
 video {
@@ -33,6 +38,7 @@ video {
 .imageThu2 {
 	margin: 4px;
 	max-width: 100%;
+	position: relative;
 }
 
 .imageThu2 img {

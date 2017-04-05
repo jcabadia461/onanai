@@ -135,20 +135,64 @@ objImg = function(dataMedia){
 		}
 	}
 
+	var barraBotones = function() {
+		if(typeof this.elemBarra == 'object'){
+			this.elemBarra.style.display = 'block';
+		} else {
+			this.elemBarra = document.createElement('div');
+			this.elemBarra.className = 'barraBotones';
+			this.elemBarra.onmouseover = function() {
+				this.style.opacity = 1;
+			}
+			this.elemBarra.onmouseout = function() {
+				this.style.opacity = .1;
+			}
+
+			var botones = document.createElement('div');
+			botones.setAttribute('class', 'filaBotones');
+
+			//favoritos
+			var favorito = document.createElement('img');
+			favorito.className = 'imgBotones';
+			if(_data.favorito > 4) {
+				favorito.src = '/album/public/img/iconos/favorito.png';
+			} else {
+				favorito.src = '/album/public/img/iconos/favoritoLess-48.png';
+			}
+			botones.appendChild(favorito);
+
+			//img zoom
+			var zoom = document.createElement('img');
+			zoom.setAttribute('src', '/album/public/img/iconos/ico-full-img.png');
+			zoom.setAttribute('class', 'imgBotones');
+			zoom.onclick = function() {
+				_self.enClick()
+			};
+			botones.appendChild(zoom);
+
+			//img cerrar
+			var cerrar = document.createElement('img');
+			cerrar.setAttribute('src', '/album/public/img/iconos/cerrar.png');
+			cerrar.setAttribute('class', 'imgBotones');
+			cerrar.onclick = function() {
+				_self.enClick()
+			};
+			botones.appendChild(cerrar);
+
+			// fin botones
+			this.elemBarra.appendChild(botones);
+			if(_data.tipo == 'V'){
+				this.elemCapaVideo.appendChild(this.elemBarra);
+			} else {
+				this.elemDiv.appendChild(this.elemBarra);
+			}
+		}
+	}
+
 	var creaCapaVideo = function(){
 		this.elemCapaVideo = document.createElement('div');
 		this.elemCapaVideo.setAttribute('class', 'capaVideo');
-		var botones = document.createElement('div');
-		botones.setAttribute('class', 'filaBotones');
-		//img cerrar
-		var cerrar = document.createElement('img');
-		cerrar.setAttribute('src', '/album/public/img/iconos/cerrar.png');
-		cerrar.setAttribute('class', 'botonCerrarVideo');
-		cerrar.onclick = function(){_self.enClick()};
 
-		botones.appendChild(cerrar);
-		this.elemCapaVideo.appendChild(botones);
-		
 		this.elemVideo = document.createElement("video");
 		if(screen.availWidth > 600){
 			this.elemVideo.src = "/videos/"+_data.id+"/nada640x480.mp4";
@@ -171,13 +215,11 @@ objImg = function(dataMedia){
 
 		if(_data.tipo == 'V'){
 			_enVideo = true;
-			//borramos contenido actual;
 			this.elem.style.display = 'none';
-
 			if(typeof this.elemCapaVideo == 'undefined'){
 				creaCapaVideo.apply(this);
 			} else {
-				this.elemCapaVideo.style.display = '';
+				this.elemCapaVideo.style.display = 'block';
 			}
 		} else {
 			if(screen.availWidth > 600){
@@ -185,58 +227,21 @@ objImg = function(dataMedia){
 			} else {
 				this.elem.src = _data.recorte.t320;
 			}
-
-
-			if(typeof this.elemBarra == 'object') {
-				this.elemBarra.style.display = 'block';
-			} else {
-				this.elemBarra = document.createElement('div');
-				this.elemBarra.className = 'barraBotones';
-				this.elemBarra.onmouseover = function(){
-					this.style.opacity = 1;
-				}
-				this.elemBarra.onmouseout = function(){
-					this.style.opacity = .1;
-				}
-
-				var botones = document.createElement('div');
-				botones.setAttribute('class', 'filaBotones');
-
-				//img zoom
-				var zoom = document.createElement('img');
-				zoom.setAttribute('src', '/album/public/img/iconos/ico-full-img.png');
-				zoom.setAttribute('class', 'botonCerrarVideo');
-				zoom.onclick = function(){_self.enClick()};
-				botones.appendChild(zoom);
-				
-
-				//img cerrar
-				var cerrar = document.createElement('img');
-				cerrar.setAttribute('src', '/album/public/img/iconos/cerrar.png');
-				cerrar.setAttribute('class', 'botonCerrarVideo');
-				cerrar.onclick = function(){_self.enClick()};
-				botones.appendChild(cerrar);
-
-				// fin botones
-
-				this.elemBarra.appendChild(botones);
-
-				this.elemDiv.appendChild(this.elemBarra);
-				this.elemDiv.style.position = 'relative';
-			}
-
 		}
+		barraBotones.apply(this);
 	}
+
 	this.toThumb = function(){
 		_enThumb = true;
+		if(typeof this.elemBarra == 'object')
+			this.elemBarra.style.display = 'none';
+
 		if(_enVideo){
 			_enVideo = false;
 			this.elemVideo.pause();
 			this.elemCapaVideo.style.display = 'none';
 			this.elem.style.display = '';
 		} else {
-			if(typeof this.elemBarra == 'object')
-				this.elemBarra.style.display = 'none';
 			this.elem.setAttribute('src', this.getThumb());
 		}
 		this.finalPaintImg();
