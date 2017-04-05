@@ -141,12 +141,6 @@ objImg = function(dataMedia){
 		} else {
 			this.elemBarra = document.createElement('div');
 			this.elemBarra.className = 'barraBotones';
-			this.elemBarra.onmouseover = function() {
-				this.style.opacity = 1;
-			}
-			this.elemBarra.onmouseout = function() {
-				this.style.opacity = .1;
-			}
 
 			var botones = document.createElement('div');
 			botones.setAttribute('class', 'filaBotones');
@@ -179,12 +173,38 @@ objImg = function(dataMedia){
 			};
 			botones.appendChild(cerrar);
 
+			//hamburguesa
+			var ham = document.createElement('div');
+			ham.className = 'hamburger hamburger--slider';
+			ham.innerHTML = '<div class="hamburger-box"> <div class="hamburger-inner"></div> </div>';
+			ham.onclick = function(){
+				this.classList.toggle("is-active");
+				_self.hamburgerClick();
+			}
+			botones.appendChild(ham);
+
 			// fin botones
 			this.elemBarra.appendChild(botones);
 			if(_data.tipo == 'V'){
 				this.elemCapaVideo.appendChild(this.elemBarra);
 			} else {
 				this.elemDiv.appendChild(this.elemBarra);
+			}
+		}
+	}
+
+	this.hamburgerClick = function(){
+		var ham = this.elemBarra.getElementsByClassName("hamburger")[0];
+		var btns = this.elemBarra.getElementsByTagName('img');
+		if(ham.className.search(/is-active/g) > -1){
+			this.elemBarra.style.backgroundColor = "rgba(188, 215, 243, 0.3)";
+			for(var i=0; i < btns.length; i++){
+				btns[i].className+= " show";
+			}
+		} else {
+			this.elemBarra.style.backgroundColor = '';
+			for(var i=0; i < btns.length; i++){
+				btns[i].className = btns[i].className.replace(" show", '');
 			}
 		}
 	}
