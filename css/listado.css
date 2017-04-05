@@ -19,6 +19,9 @@
 
 .imgBotones {
 	margin-left: 10px;
+	width: auto !important;
+	height: auto !important;
+	max-width: 10% !important;
 }
 
 video {
