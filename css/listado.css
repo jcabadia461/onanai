@@ -9,6 +9,13 @@
 	width: 100%;
 	margin-top: -1px;
 }
+.barraBotones.show{
+	background-color: rgba(188, 215, 243, 0.3);
+}
+.show img{
+	display: block;
+}
+
 
 .filaBotones {
 	display: flex;
@@ -17,11 +24,11 @@
 }
 
 .imgBotones {
-	margin-left: 10px;
 	width: auto !important;
+	max-width: 10% !important;
 	height: auto !important;
-	max-width: 15% !important;
 	display: none;
+	margin-left: 4px;
 }
 
 .imgBotones.show {

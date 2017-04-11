@@ -194,19 +194,7 @@ objImg = function(dataMedia){
 	}
 
 	this.hamburgerClick = function(){
-		var ham = this.elemBarra.getElementsByClassName("hamburger")[0];
-		var btns = this.elemBarra.getElementsByTagName('img');
-		if(ham.className.search(/is-active/g) > -1){
-			this.elemBarra.style.backgroundColor = "rgba(188, 215, 243, 0.3)";
-			for(var i=0; i < btns.length; i++){
-				btns[i].className+= " show";
-			}
-		} else {
-			this.elemBarra.style.backgroundColor = '';
-			for(var i=0; i < btns.length; i++){
-				btns[i].className = btns[i].className.replace(" show", '');
-			}
-		}
+		this.elemBarra.classList.toggle("show");
 	}
 
 	var creaCapaVideo = function(){
