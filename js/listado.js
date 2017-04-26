@@ -101,6 +101,7 @@ objImg = function(dataMedia){
 	var _enVideo = false;
 	var _self = this;
 	var _oriWidth, _oriHeight;
+	var _videoIniciado = false;
 
 	var _init = function(){
 		this.elemDiv = document.createElement("div");
@@ -148,10 +149,13 @@ objImg = function(dataMedia){
 			//favoritos
 			var favorito = document.createElement('img');
 			favorito.className = 'imgBotones';
-			if(_data.favorito > 4) {
+			if(_data.favorito > 1) {
 				favorito.src = '/album/public/img/iconos/favorito.png';
 			} else {
 				favorito.src = '/album/public/img/iconos/favoritoLess-48.png';
+			}
+			favorito.onclick = function(){
+				_self.clickedFavorite();
 			}
 			botones.appendChild(favorito);
 
@@ -160,7 +164,7 @@ objImg = function(dataMedia){
 			zoom.setAttribute('src', '/album/public/img/iconos/ico-full-img.png');
 			zoom.setAttribute('class', 'imgBotones');
 			zoom.onclick = function() {
-				_self.enClick()
+				_self.zoomIt();
 			};
 			botones.appendChild(zoom);
 
@@ -197,6 +201,23 @@ objImg = function(dataMedia){
 		this.elemBarra.classList.toggle("show");
 	}
 
+	var _onMediaEvent = function(evt){
+		switch (evt.type) {
+			case 'play':
+				if(!_videoIniciado){
+					updateRows(_data.id, 'view');
+					_videoIniciado = true;
+				}
+				break;
+			case 'ended':
+				_videoIniciado = false;
+				break;
+			default:
+				// statements_def
+				break;
+		}
+	}
+
 	var creaCapaVideo = function(){
 		this.elemCapaVideo = document.createElement('div');
 		this.elemCapaVideo.setAttribute('class', 'capaVideo');
@@ -212,6 +233,19 @@ objImg = function(dataMedia){
 		this.elemVideo.setAttribute('controls', '');
 
 		this.elemCapaVideo.appendChild(this.elemVideo);
+
+        var deferredOnHTML5MediaEvent = (function(that) {
+			return function(event) {
+            	_onMediaEvent.apply(that, [event]);
+            }
+		})(this);
+
+
+		this.elemVideo.addEventListener("play", deferredOnHTML5MediaEvent, false);
+		this.elemVideo.addEventListener("playing", deferredOnHTML5MediaEvent, false);
+		this.elemVideo.addEventListener("pause", deferredOnHTML5MediaEvent, false);
+		this.elemVideo.addEventListener("progress", deferredOnHTML5MediaEvent, false);
+		this.elemVideo.addEventListener("ended", deferredOnHTML5MediaEvent, false);
 
 		this.elemDiv.appendChild(this.elemCapaVideo);
 	}
@@ -237,6 +271,13 @@ objImg = function(dataMedia){
 			}
 		}
 		barraBotones.apply(this);
+	}
+
+	this.zoomIt = function(){
+		if(_data.tipo == 'I'){
+			updateRows(_data.id, 'view');
+			window.open(_data.recorte.full, '_blank');
+		}
 	}
 
 	this.toThumb = function(){
@@ -279,6 +320,10 @@ objImg = function(dataMedia){
 		}
 	}
 
+	this.clickedFavorite = function(){
+		updateRows(_data.id, 'favorite');
+	}
+
 	_init.apply(this);
 }
 
@@ -290,6 +335,15 @@ window.onresize = function(event) {
 		setTimeout(function(){responsivo();}, 250);
 	}
 };
+
+function updateRows(pIds, pAccion, pData){
+	$.post("/album/public/ver/admin/",
+		{accion: pAccion, ids: pIds},
+		function(data, status){
+			console.log("Data: " + data + "\nStatus: " + status);
+		}
+	);	
+}
 
 function getRatio(){
 	var w = document.body.clientWidth;
@@ -334,7 +388,6 @@ $(document).ready(function() {
 	g_ratio = getRatio();
 	listado();
 });
-
 
 
 
@@ -553,17 +606,6 @@ objImg2 = function() {
 function clickedAux(id){
 	var img =$("#img_"+id);
 	clicked(img[0]);
-}
-
-function clickedFavorite(id){
-	$.post("/album/public/ver/admin/",
-		{accion: 'favorite', ids: id},
-		function(data, status){
-			console.log("Data: " + data + "\nStatus: " + status);
-			if(data == "OK" && status == "success"){
-				alert('marcado como favorito');
-			}
-		});	
 }
 
 function clicked(a){
