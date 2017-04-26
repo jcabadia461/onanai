@@ -162,7 +162,7 @@ objImg = function(dataMedia){
 			//img zoom
 			var zoom = document.createElement('img');
 			zoom.setAttribute('src', '/album/public/img/iconos/ico-full-img.png');
-			zoom.setAttribute('class', 'imgBotones');
+			zoom.setAttribute('class', 'imgBotones zoom');
 			zoom.onclick = function() {
 				_self.zoomIt();
 			};

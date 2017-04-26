@@ -23,6 +23,8 @@
     justify-content: flex-end;
 }
 
+.capaVideo .zoom { display: none; }
+
 .imgBotones {
 	width: auto !important;
 	max-width: 10% !important;
