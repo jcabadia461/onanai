@@ -3,6 +3,19 @@
 
 }
 
+.imgCheck {
+	position: absolute;	top: -7px;	right: -7px; display: none; width: 30%;
+}
+
+.seleccionado {
+    border: thin solid green;
+    border-radius: 6px;
+}
+
+.seleccionado .imgCheck {
+	display: block;
+}
+
 .barraBotones {
 	position: absolute;
 	top: 1;

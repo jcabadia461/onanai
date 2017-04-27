@@ -115,7 +115,8 @@ objImg = function(dataMedia){
 
 		this.elemDiv.appendChild(this.elem);
 		var imgCheck = document.createElement('img');
-		imgCheck.src = '/css/check.png';
+		imgCheck.src = '/album/public/css/check.png';
+		imgCheck.className = 'imgCheck';
 		this.elemDiv.appendChild(imgCheck);
 
 	}
