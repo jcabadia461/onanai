@@ -4,7 +4,7 @@ var g_agrupaFecha = true;
 var g_imgs = new Object();
 var g_todas_cargadas = false;
 var g_scrollDiv = false;
-var g_opacity = 1.05;
+var g_opacity = .05;
 var g_administrar = false;
 var g_height_changed = false;
 var g_ratio = 1;
@@ -114,6 +114,9 @@ objImg = function(dataMedia){
 		this.elem.onclick = function(){_self.enClick()};
 
 		this.elemDiv.appendChild(this.elem);
+		var imgCheck = document.createElement('img');
+		imgCheck.src = '/css/check.png';
+		this.elemDiv.appendChild(imgCheck);
 
 	}
 
@@ -130,7 +133,10 @@ objImg = function(dataMedia){
 
 	this.enClick = function(){
 		if(_enThumb){
-			this.toBig();
+			if(g_administrar)
+				this.select();
+			else
+				this.toBig();
 		} else {
 			this.toThumb();
 		}
@@ -248,6 +254,10 @@ objImg = function(dataMedia){
 		this.elemVideo.addEventListener("ended", deferredOnHTML5MediaEvent, false);
 
 		this.elemDiv.appendChild(this.elemCapaVideo);
+	}
+
+	this.select = function(){
+		this.elemDiv.classList.toggle("seleccionado");
 	}
 
 	this.toBig = function(){
