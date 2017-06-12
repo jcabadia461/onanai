@@ -8,8 +8,10 @@
 }
 
 .seleccionado {
+/*
     border: thin solid green;
     border-radius: 6px;
+*/
 }
 
 .seleccionado .imgCheck {

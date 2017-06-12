@@ -78,7 +78,7 @@ function listado(){
 				var num = response.length;
 				if(num == 0)
 					g_todas_cargadas = true;
-				num = (num - 15);
+				num = (num - 40);
 				if(num < 1)
 					g_scrollDiv = false;
 				$.each(response, function(idx, rec){
@@ -261,6 +261,10 @@ objImg = function(dataMedia){
 		this.elemDiv.classList.toggle("seleccionado");
 	}
 
+	this.isSelect = function(){
+		return $(this.elemDiv).hasClass('seleccionado');
+	}
+
 	this.toBig = function(){
 		_enThumb = false;
 		this.elem.removeAttribute('width');
@@ -333,6 +337,7 @@ objImg = function(dataMedia){
 
 	this.clickedFavorite = function(){
 		updateRows(_data.id, 'favorite');
+		alert('marcado como favorito');
 	}
 
 	_init.apply(this);
@@ -699,6 +704,7 @@ adminClick = function(){
 		g_administrar = false;
 		$(objElemMenuAdmin).hide();
 		objElemMenu.removeClass("admin");
+		unCheckElems();
 	} else {
 		g_administrar = true;
 		objElemMenu.addClass("admin");
@@ -719,6 +725,9 @@ getCheckedElems = function(){
 				ids = g_imgs[index].p1Data.id;
 		}
 	}	
+console.log('***************************************************************************************************************');
+console.log(ids);
+console.log('***************************************************************************************************************');
 	return ids;
 }
 
@@ -731,17 +740,17 @@ hideCheckedElems = function(){
 }
 
 unCheckElems = function(){
-	for(var index in g_imgs){ 
-		if(g_imgs[index].p1Estado == 'checked'){
-			g_imgs[index].toSmall();
+	for(var a in g_imgs){
+		if(g_imgs[a].isSelect()){
+			g_imgs[a].select();
 		}
 	}
 }
 
 hideNotCheckedElems = function(){
-	$('.col_2').hide();
+//	$('.col_2').hide();
 	for(var index in g_imgs){ 
-		if(g_imgs[index].p1Estado != 'checked'){
+		if(!g_imgs[index].isSelect()){
 			g_imgs[index].fadeOutElem();
 		}
 	}
