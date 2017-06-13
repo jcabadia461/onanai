@@ -1,12 +1,7 @@
-var g_pagina = 0;
-var g_pidiendo = false;
-var g_agrupaFecha = true;
 var g_imgs = new Object();
-var g_todas_cargadas = false;
 var g_scrollDiv = false;
 var g_opacity = .05;
 var g_administrar = false;
-var g_height_changed = false;
 var g_ratio = 1;
 var g_resize = false;
 
@@ -59,38 +54,6 @@ function minimise(){
 	g_ratio = g_ratio - .1;
 	for(var key in g_imgs){
 		g_imgs[key].finalPaintImg();
-	}
-}
-
-function listado(){
-	elemPrincipal = document.getElementById('listadoImgs');
-	elemPrincipal.setAttribute('class', 'listadoImgsFlex');
-	if(!g_todas_cargadas){
-		if(g_pidiendo == false){
-			g_pidiendo = true;
-			url = $("#fechaListado").val();
-			if(url.search('mas-valoradas') > 1 || url.search('mas-vistas') > 1)
-				g_agrupaFecha = false;
-			else
-				g_agrupaFecha = true;
-			url = url.concat("/pagina/").concat(g_pagina++);
-			$.getJSON(url, function (response) {
-				var num = response.length;
-				if(num == 0)
-					g_todas_cargadas = true;
-				num = (num - 40);
-				if(num < 1)
-					g_scrollDiv = false;
-				$.each(response, function(idx, rec){
-					g_imgs[rec.id] = new objImg(rec);
-					g_imgs[rec.id].insertarEn(elemPrincipal);
-					if(idx == num) {
-						g_scrollDiv = rec.id;
-					}
-				})
-				g_pidiendo = false;
-			});
-		}
 	}
 }
 
@@ -400,9 +363,101 @@ function responsivo(){
 	g_resize = false;
 }
 
+
+
+
+
+
+
+
+
+
 $(document).ready(function() {
 	g_ratio = getRatio();
-	listado();
+
+	if(window.onanai == undefined) window.onanai = {};
+
+	(function(namespace) {
+		function Listado(){
+			var g_pagina = 0;
+			var g_pidiendo = false;
+			var g_todas_cargadas = false;
+			var _that = this;
+			var _elemPrincipal, _url;
+			var _agrupaFecha = true;
+
+			_listado = function(){		
+				if(!g_todas_cargadas){
+					if(g_pidiendo == false){
+						g_pidiendo = true;
+						tmpUrl = _url.concat("/pagina/").concat(g_pagina++);
+						$.getJSON(tmpUrl, function (response) {
+							var num = response.length;
+							if(num == 0)
+								g_todas_cargadas = true;
+							num = (num - 40);
+							if(num < 1)
+								g_scrollDiv = false;
+							$.each(response, function(idx, rec){
+								g_imgs[rec.id] = new objImg(rec);
+								g_imgs[rec.id].insertarEn(_elemPrincipal);
+								if(idx == num) {
+									g_scrollDiv = rec.id;
+								}
+							})
+							g_pidiendo = false;
+						});
+					}
+				}
+			}
+
+			_doScroll = function(){
+				if(g_pidiendo == false) {
+					if (g_scrollDiv) {
+						if($("#"+g_scrollDiv).isOnScreen() || $("#alFinal").isOnScreen()){
+							_listado.apply(this);
+						}
+					}
+				}
+				//Si promo01 está visible pero no en pantalla, la ocultamos.
+				if($(".col_2").css('display') == 'block') {
+					if(!$(".col_2").isOnScreen()){
+						$(".col_2").hide();
+					}
+				}
+				// Si s-menu está visible pero no en pantalla, la ocultamos
+				if($("div.s-menu").css("display") == 'block') {
+					if(!$("div.s-menu").isOnScreen()){
+						$("div.s-menu").hide();
+					}
+				}
+			}
+
+			var _init = function(){
+				$(window).scroll(function(){
+					_doScroll.apply(_that);
+				});
+				_elemPrincipal = document.getElementById('listadoImgs');
+				_elemPrincipal.setAttribute('class', 'listadoImgsFlex');
+
+				_url = $("#fechaListado").val();
+				if(_url.search('mas-valoradas') > 1 || _url.search('mas-vistas') > 1)
+					_agrupaFecha = false;
+				else
+					_agrupaFecha = true;
+			};
+
+			_init();
+			_listado.apply(this);
+		}
+
+
+
+
+		namespace.lis = new Listado();
+
+	}(onanai));
+
 });
 
 
@@ -657,34 +712,7 @@ $.fn.isOnScreen = function(){
 	
 };
 
-/**
-* cada vez que hacemos scroll, comprobamos si el div es visible
-**/
-$(window).scroll(function(){
-	doScroll();
-});
 
-doScroll = function(){
-	if(g_pidiendo == false) {
-		if (g_scrollDiv) {
-			if($("#"+g_scrollDiv).isOnScreen() || $("#alFinal").isOnScreen()){
-				listado();
-			}
-		}
-	}
-	//Si promo01 está visible pero no en pantalla, la ocultamos.
-	if($(".col_2").css('display') == 'block') {
-		if(!$(".col_2").isOnScreen()){
-			$(".col_2").hide();
-		}
-	}
-	// Si s-menu está visible pero no en pantalla, la ocultamos
-	if($("div.s-menu").css("display") == 'block') {
-		if(!$("div.s-menu").isOnScreen()){
-			$("div.s-menu").hide();
-		}
-	}
-}
 /*
 	$(window).scroll(function(){
 		var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
