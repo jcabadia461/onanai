@@ -743,19 +743,16 @@ adminClick = function(){
 }
 
 
+/* miomio
+revisado version 2
+*/
 getCheckedElems = function(){
 	var ids = '';
 	for(var index in g_imgs){ 
-		if(g_imgs[index].p1Estado == 'checked'){
-			if(ids)
-				ids+=','+g_imgs[index].p1Data.id;
-			else
-				ids = g_imgs[index].p1Data.id;
+		if(g_imgs[index].isSelect()){
+			ids+=ids?','+index:index;
 		}
 	}	
-console.log('***************************************************************************************************************');
-console.log(ids);
-console.log('***************************************************************************************************************');
 	return ids;
 }
 
